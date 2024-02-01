@@ -1,7 +1,7 @@
 function teste() {
     const barraPesquisa = document.getElementById('barra-pesquisa').value;
     const formatado = barraPesquisa.replace(/ /g, '+');
-    fetch(`http://www.omdbapi.com/?apikey=42664b20&s=${formatado}`)
+    fetch('http://www.omdbapi.com/?apikey=42664b20&s='+formatado)
     .then(result => result.json())
     .then(json => {
         if (json['Response'] == 'True') {

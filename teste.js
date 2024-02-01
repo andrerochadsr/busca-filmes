@@ -1,11 +1,8 @@
 function teste() {
     const barraPesquisa = document.getElementById('barra-pesquisa').value;
-    const formatado = barraPesquisa.replace(/ /g, '+');
-    console.log(formatado)
-    fetch('http://www.omdbapi.com/?apikey=42664b20&s='+formatado)
+    const formatado = barraPesquisa. trim().replace(/ /g, '+');   fetch('http://www.omdbapi.com/?apikey=42664b20&s='+formatado)
     .then(result => result.json())
     .then(json => {
-        console.log(json)
         if (json['Response'] == 'True') {
             const listaFilmes = json['Search'];
             document.getElementById('div').innerHTML = '';

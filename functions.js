@@ -13,6 +13,9 @@ async function func() {
             const novoElementoIMG = document.createElement('img')
             //atribui a fonte da imagem
             novoElementoIMG.setAttribute('src', listaFilmes[inicio]['Poster']);
+            //atribui o testo alternativo 
+            novoElementoIMG.setAttribute('alt', `Poster ${listaFilmes[inicio]['Title']}`) 
+            //atribui as dimensoes 
             novoElementoIMG.setAttribute('width', 153);
             novoElementoIMG.setAttribute('height', 232.8);
             div.appendChild(novoElementoIMG);

@@ -5,6 +5,7 @@ async function func() {
     const json = await URL.json();
     if (json['Response'] == 'True') {
         const listaFilmes = json['Search'];
+        console.log(listaFilmes);
         document.getElementById('div').innerHTML = '';
         const div = document.getElementById('div');
         //laço para criar novos parágrafos
@@ -24,7 +25,7 @@ async function func() {
             div.appendChild(novoElementoNome);
             document.getElementById(`nome-${inicio}`).innerHTML ='Nome: '+ listaFilmes[inicio]['Title'];
 
-            //cria um parágrafo para os anos
+            //cria um parágrafo para o ano
             const novoElementoAno = document.createElement('p');
             //atribui im ID de acordo com a variavel INICIO
             novoElementoAno.setAttribute('id', `ano-${inicio}`);

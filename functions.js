@@ -1,7 +1,7 @@
 async function func() {
     const barraPesquisa = document.getElementById('barra-pesquisa').value;
     const formatado = barraPesquisa.trim().replace(/ /g, '+');
-    const URL = await fetch(`http://www.omdbapi.com/?s=${formatado}&apikey=42664b20`);
+    const URL = await fetch(`https://www.omdbapi.com/?s=${formatado}&apikey=42664b20`);
     const json = await URL.json();
     if (json['Response'] == 'True') {
         const listaFilmes = json['Search'];

@@ -2,7 +2,7 @@ async function func() {
     const barraPesquisa = document.getElementById('barra-pesquisa').value;
     const formatado = barraPesquisa.trim().replace(/ /g, '+');
     console.log(1)
-    const URL = await fetch(`http://www.omdbapi.com/?s=${formatado}&apikey=42664b20`);
+    const URL = await fetch('http://www.omdbapi.com/?s=batman&apikey=42664b20');
     console.log(2)
     const json = await URL.json();
     console.log(3)

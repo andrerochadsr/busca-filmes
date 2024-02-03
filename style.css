@@ -23,19 +23,27 @@ h1 {
     background-color: aqua;
 }
 
-.div-filmes {
-    display: inline-block;
-    background-color: grey;
-    border: 1px solid black;
-    text-align: center;
-    height: 200px;
-    width: 200px;
+
+
+.cores {
+    background-color: brown;
 }
 
-.div-filmes:hover {
-    background-color: blue;
-}
+
 
 p {
-    display: inline-block;
+    
+    background-color: aquamarine;
+}
+
+.final {
+    
+    text-align: center;
+}
+
+.container-filmes {
+    background-color: blue;
+    height: 400px;
+    width: 200px;
+    text-align: center;
 }

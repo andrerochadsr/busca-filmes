@@ -2,6 +2,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
+
 body {
     /*
     shorthand font
@@ -12,20 +13,50 @@ body {
     */
     font: italic bolder 1em;
     font-family: 'Kaushan Script', sans-serif;
+    background-image: url(img-galaxy.jpg);
+    background-size: 200%;
+
 }
 
 h1 {
     text-align: center;
-    font-size: 50px;
+    font-size: 80px;
+    background-color: rgba(170, 170, 170, 0.350);
+    padding: 0px;
+    margin: 20px;
+    border-radius: 10px;
 }
 
 .barra-pesquisa {
     background-color: aqua;
+    height: 50px;
+    width: 600px;
+    font-size: 40px;
+    border: none;
+    padding: 10px;
+    margin: 50px;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+    text-align: center;
 }
+
+.barra-pesquisa:focus {
+    background-color: rgb(16, 226, 156);
+    outline-style: none;
+    
+}
+
+.botao-pesquisa {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
 
 p {
     
-    background-color: aquamarine;
+    background-color: rgb(10, 219, 150);
 }
 
 .final {
@@ -38,4 +69,11 @@ p {
     height: 400px;
     width: 200px;
     text-align: center;
+    padding: 10px;
+    margin-top: 50px;
+
+    display: block;
+    margin: auto;
+
 }
+

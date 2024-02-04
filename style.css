@@ -42,6 +42,10 @@ h1 {
 
 }
 
+.barra-pesquisa:hover {
+    background-color: rgb(1, 231, 231);
+}
+
 .barra-pesquisa:focus {
     background-color: rgb(16, 226, 156);
     outline-style: none;
@@ -57,6 +61,12 @@ h1 {
     height: 50px;
     width: 300px;
     border-radius: 5px;
+    border: none;
+}
+
+.botao-pesquisa:hover {
+    background-color: blanchedalmond;
+
 }
 
 p {
@@ -64,11 +74,6 @@ p {
     border-radius: 5px;
     padding: 5px;
 
-}
-
-.final {
-    
-    text-align: center;
 }
 
 .compartimento-filmes {
@@ -91,5 +96,8 @@ p {
 
 }
 
-
-
+.final {
+    display: block;
+    margin: auto;
+    text-align: center;
+}

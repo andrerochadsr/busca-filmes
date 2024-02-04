@@ -36,9 +36,10 @@ h1 {
     padding: 10px;
     margin: 50px;
     border-radius: 10px;
+    text-align: center;
     display: block;
     margin: auto;
-    text-align: center;
+
 }
 
 .barra-pesquisa:focus {
@@ -49,9 +50,15 @@ h1 {
 
 .botao-pesquisa {
     display: block;
-    text-align: center;
     margin: auto;
+    margin-top: 50px;
+    font-size: 30px;
+    height: 50px;
+    width: 300px;
+    border-radius: 5px;
 }
+
+
 
 
 p {
@@ -72,8 +79,12 @@ p {
     padding: 10px;
     margin-top: 50px;
 
-    display: block;
-    margin: auto;
+}
 
+.compartimento-filmes {
+    display: flex;
+    overflow-x: auto;
+
+    
 }
 

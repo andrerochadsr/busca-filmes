@@ -60,23 +60,15 @@ h1 {
 }
 
 p {
-    background-color: antiquewhite;
+    background-color: rgba(250, 235, 215, 0.5);
+    border-radius: 5px;
+    padding: 5px;
+
 }
 
 .final {
     
     text-align: center;
-}
-
-.container-filmes {
-    background-color: black;
-    height: 400px;
-    width: 200px;
-    text-align: center;
-    padding: 10px;
-    margin: 10px 10px 10px 10px;
-    border-radius: 10px;
-
 }
 
 .compartimento-filmes {
@@ -86,4 +78,18 @@ p {
     justify-content: center;
 
 }
+
+.container-filmes {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 400px;
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 10px;
+    padding: 20px 10px 20px 10px;
+
+}
+
+
 

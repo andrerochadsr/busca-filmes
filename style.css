@@ -30,10 +30,10 @@ h1 {
 .barra-pesquisa {
     background-color: aqua;
     height: 50px;
-    width: 600px;
+    max-width: 100%;
     font-size: 40px;
     border: none;
-    padding: 10px;
+    padding: 0px;
     margin: 50px;
     border-radius: 10px;
     text-align: center;

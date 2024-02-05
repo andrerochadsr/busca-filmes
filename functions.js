@@ -61,15 +61,23 @@ async function func() {
             novoElementoContainer.appendChild(novoElementoTipo);
             document.getElementById(`tipo-${inicio}`).innerHTML ='Tipo: '+ tipo;
 
-            //cria um link de pesquisa
             
+            //cria um parágrafo para inserir o link
+            const novoElementoDivLink = document.createElement('p')
+            novoElementoDivLink.setAttribute('id', `link-p-${inicio}`);
+
+            //cria um link de pesquisa
             const novoElementoLink = document.createElement('a');
             novoElementoLink.setAttribute('id', `link-${inicio}`);
             novoElementoLink.setAttribute('class', 'link-search');
             novoElementoLink.setAttribute('href', `https://www.google.com/search?q=${nome}+${ano}+${tipo}`);
             novoElementoLink.setAttribute('target', '_blank');
+
+            
             novoElementoLink.setAttribute('rel', 'external');
-            novoElementoContainer.appendChild(novoElementoLink);
+
+            novoElementoDivLink.appendChild(novoElementoLink);
+            novoElementoContainer.appendChild(novoElementoDivLink);
             document.getElementById(`link-${inicio}`).innerHTML = 'Search';
         }
     } else {

@@ -16,6 +16,7 @@ body {
     */
     font: italic bolder 1em;
     font-family: 'Kaushan Script', sans-serif;
+    
     background-color: blue;
 
 }
@@ -75,15 +76,16 @@ h1 {
 p {
     background-color: rgba(250, 235, 215, 0.5);
     border-radius: 5px;
-    padding: 5px;
+    padding: 5px 5px 5px 0px;
 }
 
 .link-search {
-    background-color: rgba(250, 235, 215, 0.5);
-    border-radius: 5px;
-    padding: 5px;
-    width: 300px;
+    padding: 5px 15px 5px 15px;
+    text-decoration: none;
+}
 
+.link-search:hover {
+    color: black;
 }
 
 .compartimento-filmes {

@@ -3,8 +3,8 @@ async function func() {
     const formatado = barraPesquisa.trim().replace(/ /g, '+');
     const URL = await fetch(`https://www.omdbapi.com/?s=${formatado}&apikey=42664b20`);
     const json = await URL.json();
-    if (json['Response'] == 'True') {
-        const listaFilmes = json['Search'];
+    if (json.Response === 'True') {
+        const listaFilmes = json.Search;
         document.getElementById('div').innerHTML = '';
         const div = document.getElementById('div');
         
@@ -12,10 +12,10 @@ async function func() {
         for (inicio = 0; inicio < listaFilmes.length; inicio++) {
 
             //variaveis para as informações dos filmes e series
-            const nome = listaFilmes[inicio]['Title'];
-            const img = listaFilmes[inicio]['Poster'];
-            const ano = listaFilmes[inicio]['Year'];
-            const tipo = listaFilmes[inicio]['Type'];
+            const nome = listaFilmes[inicio].Title;
+            const img = listaFilmes[inicio].Poster;
+            const ano = listaFilmes[inicio].Year;
+            const tipo = listaFilmes[inicio].Type;
 
             //cria um container para inserir os filmes e dados.
             const novoElementoContainer = document.createElement('div');

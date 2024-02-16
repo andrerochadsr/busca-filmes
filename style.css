@@ -4,7 +4,10 @@
 
 * {
     color: white;
+    margin: 0;
+    padding: 0;
 }
+
 
 body {
     /*
@@ -15,43 +18,47 @@ body {
     font-size: 16px;
     */
     font: italic bolder 1em;
-    font-family: 'Kaushan Script', sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     
-    background-color: blue;
+    background-color: #222;
 
 }
 
 h1 {
+    font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 80px;
-    background-color: rgba(170, 170, 170, 0.350);
-    padding: 0px;
-    margin: 20px;
-    border-radius: 10px;
+    background-color: rgba(170, 170, 170, 0.137);
+    padding: 10px;
+}
+
+.topo {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
 .barra-pesquisa {
-    background-color: aqua;
+    background-color: white;
+    color: black;
     height: 50px;
-    max-width: 100%;
+    max-width: 90%;
     font-size: 40px;
     border: none;
     padding: 0px;
-    margin: 50px;
     border-radius: 10px;
     text-align: center;
-    display: block;
-    margin: auto;
-
+    margin-top: 30px;
 }
 
 .barra-pesquisa:hover {
-    background-color: rgb(1, 231, 231);
+    background-color: rgb(214, 211, 211);
 }
 
 .barra-pesquisa:focus {
-    background-color: rgb(16, 226, 156);
+    background-color: gray;
     outline-style: none;
+    color: white;
     
 }
 
@@ -69,7 +76,8 @@ h1 {
 }
 
 .botao-pesquisa:hover {
-    background-color: blanchedalmond;
+    background-color: rgb(92, 91, 90);
+    color: white;
 
 }
 
@@ -77,6 +85,7 @@ p {
     background-color: rgba(250, 235, 215, 0.5);
     border-radius: 5px;
     padding: 5px 5px 5px 0px;
+    margin-top: 10px;
 }
 
 .link-search {
@@ -112,4 +121,8 @@ p {
     display: block;
     margin: auto;
     text-align: center;
+}
+
+.footer-link:hover {
+    color: black;
 }

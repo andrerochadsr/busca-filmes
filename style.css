@@ -7,7 +7,8 @@
 }
 
 
-body {
+html, body {
+    height: 100% !important;
     /*
     shorthand font
     font style > font weight > font size > font family
@@ -20,12 +21,23 @@ body {
     background-color: #222;
 }
 
+header {
+    background-color: rgba(109, 107, 107, 0.24);
+    backdrop-filter: saturate(180%) blur(5px);
+    position: fixed;
+    width: 100%;
+}
+
+
 h1 {
+
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-size: 80px;
-    background-color: rgba(170, 170, 170, 0.137);
     padding: 10px;
+    background: -webkit-linear-gradient(yellow, rgb(70, 70, 1));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .topo {
@@ -39,12 +51,12 @@ h1 {
     color: black;
     height: 50px;
     max-width: 90%;
-    font-size: 40px;
+    font-size: 2rem;
     border: none;
     padding: 0px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 150px;
 }
 
 .barra-pesquisa:hover {
@@ -63,7 +75,7 @@ h1 {
     margin: auto;
     margin-top: 50px;
     margin-bottom: 50px;
-    font-size: 30px;
+    font-size: 1.7rem;
     height: 50px;
     width: 300px;
     border-radius: 5px;
@@ -120,4 +132,23 @@ p {
 
 .footer-link:hover {
     color: black;
+}
+
+@media (max-width: 490px) {
+    h1 {
+        font-size: 3rem;
+    }
+
+    .barra-pesquisa {
+        margin-top: 100px;
+        width: 85%;
+        height: 50px;
+        font-size: 1.7rem;
+    }
+
+    .botao-pesquisa {
+        width: 170px;
+        height: 40px;
+        font-size: 1.5rem;
+    }
 }

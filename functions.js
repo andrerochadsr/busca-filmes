@@ -7,38 +7,78 @@ async function func() {
         const listaFilmes = json['Search'];
         document.getElementById('div').innerHTML = '';
         const div = document.getElementById('div');
+        
         //laço para criar novos parágrafos
         for (inicio = 0; inicio < listaFilmes.length; inicio++) {
+
+            //variaveis para as informações dos filmes e series
+            const nome = listaFilmes[inicio]['Title'];
+            const img = listaFilmes[inicio]['Poster'];
+            const ano = listaFilmes[inicio]['Year'];
+            const tipo = listaFilmes[inicio]['Type'];
+
+            //cria um container para inserir os filmes e dados.
+            const novoElementoContainer = document.createElement('div');
+            novoElementoContainer.setAttribute('class', 'container-filmes');
+            div.appendChild(novoElementoContainer);
+
+
             //cria uma div para o poster
             const novoElementoIMG = document.createElement('img')
             //atribui a fonte da imagem
-            novoElementoIMG.setAttribute('src', listaFilmes[inicio]['Poster']);
+            novoElementoIMG.setAttribute('src', img);
             //atribui o testo alternativo 
-            novoElementoIMG.setAttribute('alt', `Poster ${listaFilmes[inicio]['Title']}`) 
+            novoElementoIMG.setAttribute('alt', `Poster ${nome}`) 
             //atribui as dimensoes 
             novoElementoIMG.setAttribute('width', 153);
             novoElementoIMG.setAttribute('height', 232.8);
-            div.appendChild(novoElementoIMG);
+            //insere o elemento no container dos filmes
+            novoElementoContainer.appendChild(novoElementoIMG);
+
 
             //cria um parágrafo para os nomes
             const novoElementoNome = document.createElement('p');
             //atribui um ID de acordo com a variavel INICIO
             novoElementoNome.setAttribute('id', `nome-${inicio}`);
-            div.appendChild(novoElementoNome);
-            document.getElementById(`nome-${inicio}`).innerHTML ='Nome: '+ listaFilmes[inicio]['Title'];
+            //insere o elemento no container dos filmes
+            novoElementoContainer.appendChild(novoElementoNome);
+            document.getElementById(`nome-${inicio}`).innerHTML ='Nome: '+ nome;
+
 
             //cria um parágrafo para o ano
             const novoElementoAno = document.createElement('p');
             //atribui im ID de acordo com a variavel INICIO
             novoElementoAno.setAttribute('id', `ano-${inicio}`);
-            div.appendChild(novoElementoAno);
-            document.getElementById(`ano-${inicio}`).innerHTML ='Ano: '+ listaFilmes[inicio]['Year'];
+            //insere o elemento no container dos filmes
+            novoElementoContainer.appendChild(novoElementoAno);
+            document.getElementById(`ano-${inicio}`).innerHTML ='Ano: '+ ano;
+
 
             //cria um parágrafo para os tipos (serie ou filme)
             const novoElementoTipo = document.createElement('p');
             novoElementoTipo.setAttribute('id', `tipo-${inicio}`);
-            div.appendChild(novoElementoTipo);
-            document.getElementById(`tipo-${inicio}`).innerHTML ='Tipo: '+listaFilmes[inicio]['Type'];
+            //insere o elemento no container dos filmes
+            novoElementoContainer.appendChild(novoElementoTipo);
+            document.getElementById(`tipo-${inicio}`).innerHTML ='Tipo: '+ tipo;
+
+            
+            //cria um parágrafo para inserir o link
+            const novoElementoDivLink = document.createElement('p')
+            novoElementoDivLink.setAttribute('id', `link-p-${inicio}`);
+
+            //cria um link de pesquisa
+            const novoElementoLink = document.createElement('a');
+            novoElementoLink.setAttribute('id', `link-${inicio}`);
+            novoElementoLink.setAttribute('class', 'link-search');
+            novoElementoLink.setAttribute('href', `https://www.google.com/search?q=${nome}+${ano}+${tipo}`);
+            novoElementoLink.setAttribute('target', '_blank');
+
+            
+            novoElementoLink.setAttribute('rel', 'external');
+
+            novoElementoDivLink.appendChild(novoElementoLink);
+            novoElementoContainer.appendChild(novoElementoDivLink);
+            document.getElementById(`link-${inicio}`).innerHTML = 'Search';
         }
     } else {
         document.getElementById('div').innerHTML = 'ERRO! Tente novamente.';

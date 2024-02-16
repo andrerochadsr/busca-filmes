@@ -5,8 +5,8 @@ async function func() {
     const json = await URL.json();
     if (json.Response === 'True') {
         const listaFilmes = json.Search;
-        document.getElementById('div').innerHTML = '';
-        const div = document.getElementById('div');
+        document.querySelector('.compartimento-filmes').innerHTML = '';
+        const compartimentoFilmes = document.querySelector('.compartimento-filmes');
         
         //laço para criar novos parágrafos
         for (inicio = 0; inicio < listaFilmes.length; inicio++) {
@@ -20,7 +20,7 @@ async function func() {
             //cria um container para inserir os filmes e dados.
             const novoElementoContainer = document.createElement('div');
             novoElementoContainer.setAttribute('class', 'container-filmes');
-            div.appendChild(novoElementoContainer);
+            compartimentoFilmes.appendChild(novoElementoContainer);
 
 
             //cria uma div para o poster
@@ -81,6 +81,6 @@ async function func() {
             document.getElementById(`link-${inicio}`).innerHTML = 'Search';
         }
     } else {
-        document.getElementById('div').innerHTML = 'ERRO! Tente novamente.';
+        document.querySelector('.erro-resposta h2').innerHTML = 'ERRO! Tente novamente.';
     }
 }

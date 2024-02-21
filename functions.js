@@ -40,6 +40,7 @@ async function func() {
             const novoElementoNome = document.createElement('p');
             //atribui um ID de acordo com a variavel INICIO
             novoElementoNome.setAttribute('id', `nome-${inicio}`);
+            novoElementoNome.setAttribute('class', 'p-filmes-conteudo')
             //insere o elemento no container dos filmes
             novoElementoContainer.appendChild(novoElementoNome);
             document.getElementById(`nome-${inicio}`).innerHTML ='Nome: '+ nome;
@@ -49,6 +50,7 @@ async function func() {
             const novoElementoAno = document.createElement('p');
             //atribui im ID de acordo com a variavel INICIO
             novoElementoAno.setAttribute('id', `ano-${inicio}`);
+            novoElementoAno.setAttribute('class', 'p-filmes-conteudo')
             //insere o elemento no container dos filmes
             novoElementoContainer.appendChild(novoElementoAno);
             document.getElementById(`ano-${inicio}`).innerHTML ='Ano: '+ ano;
@@ -57,6 +59,7 @@ async function func() {
             //cria um parágrafo para os tipos (serie ou filme)
             const novoElementoTipo = document.createElement('p');
             novoElementoTipo.setAttribute('id', `tipo-${inicio}`);
+            novoElementoTipo.setAttribute('class', 'p-filmes-conteudo')
             //insere o elemento no container dos filmes
             novoElementoContainer.appendChild(novoElementoTipo);
             document.getElementById(`tipo-${inicio}`).innerHTML ='Tipo: '+ tipo;
@@ -65,11 +68,13 @@ async function func() {
             //cria um parágrafo para inserir o link
             const novoElementoDivLink = document.createElement('p')
             novoElementoDivLink.setAttribute('id', `link-p-${inicio}`);
+            novoElementoDivLink.setAttribute('class', 'p-filmes-conteudo')
 
             //cria um link de pesquisa
             const novoElementoLink = document.createElement('a');
             novoElementoLink.setAttribute('id', `link-${inicio}`);
             novoElementoLink.setAttribute('class', 'link-search');
+
             novoElementoLink.setAttribute('href', `https://www.google.com/search?q=${nome}+${ano}+${tipo}`);
             novoElementoLink.setAttribute('target', '_blank');
 

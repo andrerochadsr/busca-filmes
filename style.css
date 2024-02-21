@@ -6,15 +6,7 @@
     padding: 0;
 }
 
-
 html, body {
-    /*
-    shorthand font
-    font style > font weight > font size > font family
-
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    */
     font: italic bolder 1em;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #222;
@@ -32,10 +24,10 @@ header {
     backdrop-filter: saturate(180%) blur(5px);
     position: fixed;
     width: 100%;
+    height: 150px;
 }
 
-
-h1 {
+.titulo {
 
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
@@ -52,6 +44,30 @@ h1 {
     flex-direction: column;
 }
 
+.lista-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lista-menu li {
+    list-style-type: none;
+    font-size: 1.3rem;
+}
+
+.link-titulo {
+    margin: 30px;
+    text-decoration: none;
+    padding: 2px;       
+}
+
+.link-titulo:hover {
+    background-color: white;
+    color: black;
+    padding: 2px;
+    border-radius: 5px;
+}
+
 .barra-pesquisa {
     background-color: white;
     color: black;
@@ -62,7 +78,7 @@ h1 {
     padding: 0px;
     border-radius: 10px;
     text-align: center;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 .barra-pesquisa:hover {
@@ -78,9 +94,8 @@ h1 {
 
 .botao-pesquisa {
     display: block;
-    margin: auto;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin: auto ;
+    margin: 50px 0px;
     font-size: 1.7rem;
     height: 50px;
     width: 300px;
@@ -92,14 +107,6 @@ h1 {
 .botao-pesquisa:hover {
     background-color: rgb(92, 91, 90);
     color: white;
-
-}
-
-p {
-    background-color: rgba(250, 235, 215, 0.5);
-    border-radius: 5px;
-    padding: 5px 5px 5px 0px;
-    margin-top: 10px;
 }
 
 .link-search {
@@ -116,7 +123,6 @@ p {
     overflow-x: auto;
     flex-wrap: wrap;
     justify-content: center;
-
 }
 
 .container-filmes {
@@ -124,24 +130,39 @@ p {
     max-height: 800px;
     width: 200px;
     text-align: center;
-    padding: 10px;
     margin: 10px 10px 10px 10px;
     border-radius: 10px;
     padding: 20px 10px 20px 10px;
+}
+
+.p-filmes-conteudo {
+    background-color: rgba(250, 235, 215, 0.5);
+    border-radius: 5px;
+    padding: 5px 5px 5px 0px;
+    margin-top: 10px;
 }
 
 .final {
     display: block;
     margin: auto;
     text-align: center;
+    background-color: rgba(250, 235, 215, 0.5);
+    font-size: 1.2rem;
+    padding: 15px;
 }
 
 .footer-link:hover {
     color: black;
 }
 
+.final p {
+    padding-bottom: 5px;
+}
+
+
+
 @media (max-width: 490px) {
-    h1 {
+    .titulo {
         font-size: 3rem;
     }
 

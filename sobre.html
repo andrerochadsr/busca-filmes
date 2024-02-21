@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre</title>
+    <link rel="stylesheet" href="style-sobre.css">
+</head>
+<body>
+    <header>
+        <menu>
+            <h1 class="titulo">
+                CataSeFi
+            </h1>
+            <ul class="lista-menu">
+                <li class="linha-lista">
+                    <a href="index.html" target="_parent" class="link-titulo">Inicio</a>
+                </li>
+                <li class="linha-lista">
+                    <a href="sobre.html" target="_self" class="link-titulo">Sobre</a>
+                </li>
+                <li class="linha-lista">
+                    <a href="melhores.html" target="_self" class="link-titulo">Melhores do IMDB</a>
+                </li>
+            </ul>
+        </menu>
+    </header>
+
+    <main>
+        <section class="conteudo">
+            <div class="paragrafo-1">
+                <h2>
+                    Sobre este site.
+                </h2>
+                <p>
+                    Este site foi feito por mim com Javascript, HTML, CSS e a API OMDB, com o objetivo de praticamer meus conhecimentos iniciais sobre a area do Front-End.
+                </p>
+
+                <p>
+                    Este é um site simples de buscador de conteúdo audiovisual, que inclui filmes, serie, curta-metragens, desenhos animados, etc. Eles consome dados da API OMDB. 
+                </p>
+            </div>
+
+            <div class="paragrafo-2">
+                <h2>
+                    Funcionamento.
+                </h2>
+                <h3>
+                    Sobre a API.
+                </h3>
+                <p>
+                    Este site funciona consumindo dados de uma API chamada "OMDB API - The Open Movie Database", que é do tipo "RESTful web". A API possui diversos dados e posteres que é mantido por seus usuários. 
+                </p>
+                <h3>
+                    Sobre o meu script.
+                </h3>
+                <p>
+                    O botão "Pesquisar" dispara um evento que incia uma função assíncrona.
+                </p>
+                <p>
+                    A função começa coletando o conteúdo digitado na barra de pesquisa e então é tratado com as funções "trim()", que retira os espaços no início e no fim do que foi digitado. Logo em seguida a função "replace()" substitui os espaços entre as palavras pelo símbolo "+" para que assim seja possível enviar uma requisação correta para a API. 
+                </p>
+                <p>
+                    Caso a pesquisa do usuário seja inválida a API retorna (responde) com um 'False' e então o fluxo algorítmo é direcionado para que seja mostrado na tela uma mensagem de erro. Em caso de um retorno 'True' o algorítmo irá iniciar um laço de repetição FOR, baseado na quantidade de resultados encontrados. Para cada resultado encontrado um 'cartão' é criado, contendo o poster, o nome, o ano, o tipo (filme, serie, etc) e um link de pesquisa no google.
+                </p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div id="final" class="final">
+            <p>Acesse o <a class="footer-link" href="https://github.com/andrerochadsr/busca-filmes" target="_blank" rel="external">repositório do site no Github.</a></p>
+
+            <p>Acesse meus <a class="footer-link" href="https://github.com/andrerochadsr?tab=repositories" target="_blank" rel="external">repositórios públicos no Github.</a></p>
+        </div>
+    </footer>
+</body>
+</html>
